@@ -22,13 +22,13 @@ public class TriangleCalculator {
 
     public static void calculatePerimeter(Triangle triangle){
 
-        double firstLengthSide = calculateLength(triangle.getFirstPoint().getCoordinateX(), triangle.getSecondPoint().getCoordinateX()
+        firstLengthSide = calculateLength(triangle.getFirstPoint().getCoordinateX(), triangle.getSecondPoint().getCoordinateX()
                 , triangle.getFirstPoint().getCoordinateY(), triangle.getSecondPoint().getCoordinateY());
 
-        double secondLengthSide = calculateLength(triangle.getSecondPoint().getCoordinateX(), triangle.getThirdPoint().getCoordinateX()
+        secondLengthSide = calculateLength(triangle.getSecondPoint().getCoordinateX(), triangle.getThirdPoint().getCoordinateX()
                 , triangle.getSecondPoint().getCoordinateY(), triangle.getThirdPoint().getCoordinateY());
 
-        double thirdLengthSide = calculateLength(triangle.getFirstPoint().getCoordinateX(), triangle.getThirdPoint().getCoordinateX()
+        thirdLengthSide = calculateLength(triangle.getFirstPoint().getCoordinateX(), triangle.getThirdPoint().getCoordinateX()
                 , triangle.getFirstPoint().getCoordinateY(), triangle.getThirdPoint().getCoordinateY());
 
         double perimeterOfTriangle = firstLengthSide + secondLengthSide + thirdLengthSide;

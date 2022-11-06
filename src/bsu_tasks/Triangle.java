@@ -6,6 +6,7 @@ public class Triangle {
     private Point thirdPoint;
 
     private double perimeter;
+    private double square;
 
     public void setPerimeter(double perimeter) {
         this.perimeter = perimeter;
@@ -22,8 +23,6 @@ public class Triangle {
     public double getSquare() {
         return square;
     }
-
-    private double square;
 
     public Point getFirstPoint() {
         return firstPoint;
