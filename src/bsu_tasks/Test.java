@@ -1,6 +1,8 @@
 package bsu_tasks;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Map;
 
 public class Test {
     public static void main(String[] args) {
@@ -10,19 +12,45 @@ public class Test {
         Triangle secondTriangle = new Triangle(new Point(0, 2), new Point(2, 0)
                 , new Point(0, 0));
 
-        TriangleCalculator.calculatePerimeter(firstTriangle);
-        System.out.println("Perimeter of triangle -> " + firstTriangle.getPerimeter());
+        Triangle thirdTriangle = new Triangle(new Point(-3, 1), new Point(3, 5)
+                , new Point(0, -4));
 
-        TriangleCalculator.calculateSquare(firstTriangle);
-        System.out.println("Square of triangle -> " + firstTriangle.getSquare());
+        SmartTriangleCalculator.calculatePerimeter(firstTriangle);
+ //       System.out.println("Perimeter of triangle -> " + firstTriangle.getPerimeter() + ", hashcode -> " + firstTriangle.hashCode());
 
-        TriangleCalculator.addTypeOfTriangleToTable(firstTriangle);
-        TriangleCalculator.addTypeOfTriangleToTable(secondTriangle);
+        SmartTriangleCalculator.calculateSquare(firstTriangle);
+//        System.out.println("Square of triangle -> " + firstTriangle.getSquare() + ", hashcode -> " + firstTriangle.hashCode());
 
-        System.out.println(TriangleCalculator.getTableOfTrianglesTypes());
+        SmartTriangleCalculator.calculatePerimeter(secondTriangle);
+        SmartTriangleCalculator.calculatePerimeter(thirdTriangle);
+
+        SmartTriangleCalculator.calculateSquare(secondTriangle);
+        SmartTriangleCalculator.calculateSquare(thirdTriangle);
+
+
+        SmartTriangleCalculator.addTriangleTypeToTable(firstTriangle);
+        SmartTriangleCalculator.addTriangleTypeToTable(secondTriangle);
+        SmartTriangleCalculator.addTriangleTypeToTable(thirdTriangle);
+
+        System.out.println(SmartTriangleCalculator.getTriangleTypesTable());
+
+        double maxPerimeterRectangularTypeTriangle = SmartTriangleCalculator.findMaxPerimeter(SmartTriangleCalculator.getTriangleTypesTable()
+                                                    , TriangleTypes.RECTANGULAR);
+        double minPerimeterRectangularTypeTriangle = SmartTriangleCalculator.findMinPerimeter(SmartTriangleCalculator.getTriangleTypesTable()
+                , TriangleTypes.RECTANGULAR);
+
+        double maxSquareRectangularTypeTriangle = SmartTriangleCalculator.findMaxSquare(SmartTriangleCalculator.getTriangleTypesTable()
+                , TriangleTypes.RECTANGULAR);
+        double minSquareRectangularTypeTriangle = SmartTriangleCalculator.findMinSquare(SmartTriangleCalculator.getTriangleTypesTable()
+                , TriangleTypes.RECTANGULAR);
+
+
+
 
         /*
-            Определить наибольший/наименьший периметр,площадь для каждого типа
+            Добавить проверку на:
+            1) одинаковые координаты
+            2) лежат на одной прямой
          */
 
     }

@@ -8,6 +8,10 @@ public class Triangle {
     private double perimeter;
     private double square;
 
+    private double firstLengthSide;
+    private double secondLengthSide;
+    private double thirdLengthSide;
+
     public void setPerimeter(double perimeter) {
         this.perimeter = perimeter;
     }
@@ -24,8 +28,28 @@ public class Triangle {
         return square;
     }
 
-    public Point getFirstPoint() {
-        return firstPoint;
+    public double getFirstLengthSide() {
+        return firstLengthSide;
+    }
+
+    public void setFirstLengthSide(double firstLengthSide) {
+        this.firstLengthSide = firstLengthSide;
+    }
+
+    public double getSecondLengthSide() {
+        return secondLengthSide;
+    }
+
+    public void setSecondLengthSide(double secondLengthSide) {
+        this.secondLengthSide = secondLengthSide;
+    }
+
+    public double getThirdLengthSide() {
+        return thirdLengthSide;
+    }
+
+    public void setThirdLengthSide(double thirdLengthSide) {
+        this.thirdLengthSide = thirdLengthSide;
     }
 
     @Override
@@ -36,7 +60,14 @@ public class Triangle {
                 ", thirdPoint=" + thirdPoint +
                 ", perimeter=" + perimeter +
                 ", square=" + square +
-                '}';
+                ", firstLengthSide=" + firstLengthSide +
+                ", secondLengthSide=" + secondLengthSide +
+                ", thirdLengthSide=" + thirdLengthSide +
+                "} hashcode=" + this.hashCode() + "\n";
+    }
+
+    public Point getFirstPoint() {
+        return firstPoint;
     }
 
     public void setFirstPoint(Point firstPoint) {
