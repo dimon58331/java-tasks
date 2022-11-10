@@ -1,4 +1,4 @@
-package bsu_tasks;
+package lab1;
 
 public class Point {
 
@@ -15,7 +15,7 @@ public class Point {
 
     @Override
     public String toString() {
-        return "bsu_tasks.Point{" +
+        return "Point{" +
                 "coordinateX=" + coordinateX +
                 ", coordinateY=" + coordinateY +
                 '}';
