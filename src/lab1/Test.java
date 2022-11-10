@@ -39,30 +39,24 @@ public class Test {
         System.out.println(TrianglesTypeTable.getTriangleTypesTable());
 
 
-        System.out.println("Perimeter of triangle -> " + firstTriangle.getPerimeter() + "; information about" + firstTriangle.toString());
+        Triangle triangleMaxPerimeterRectangularTypeTriangle = TrianglesTypeTable.findTriangleWithMaxPerimeter(TriangleTypes.RECTANGULAR);
+        Triangle triangleWithMinPerimeterRectangularType = TrianglesTypeTable.findTriangleWithMinPerimeter(TriangleTypes.RECTANGULAR);
 
-        System.out.println("Square of triangle -> " + firstTriangle.getSquare() + "; information about" + firstTriangle.toString());
+        Triangle triangleMaxSquareRectangularTypeTriangle = TrianglesTypeTable.findTriangleWithMaxSquare(TriangleTypes.RECTANGULAR);
+        Triangle triangleMinSquareRectangularTypeTriangle = TrianglesTypeTable.findTriangleWithMinSquare(TriangleTypes.RECTANGULAR);
+
+        Triangle triangleMaxPerimeterArbitraryTypeTriangle = TrianglesTypeTable.findTriangleWithMaxPerimeter(TriangleTypes.ARBITRARY);
+        Triangle triangleWithMinPerimeterArbitraryType = TrianglesTypeTable.findTriangleWithMinPerimeter(TriangleTypes.ARBITRARY);
+
+        Triangle maxSquareArbitraryTypeTriangle = TrianglesTypeTable.findTriangleWithMaxSquare(TriangleTypes.ARBITRARY);
+        Triangle minSquareArbitraryTypeTriangle = TrianglesTypeTable.findTriangleWithMinSquare(TriangleTypes.ARBITRARY);
 
 
-        double maxPerimeterRectangularTypeTriangle = TrianglesTypeTable.findMaxPerimeter(TrianglesTypeTable.getTriangleTypesTable()
-                , TriangleTypes.RECTANGULAR);
-        double minPerimeterRectangularTypeTriangle = TrianglesTypeTable.findMinPerimeter(TrianglesTypeTable.getTriangleTypesTable()
-                , TriangleTypes.RECTANGULAR);
+        System.out.println("Rectangular triangle with max perimeter -> " + triangleMaxPerimeterRectangularTypeTriangle.getPerimeter()
+                + "; triangle -> " + triangleMaxPerimeterRectangularTypeTriangle);
 
-        double maxSquareRectangularTypeTriangle = TrianglesTypeTable.findMaxSquare(TrianglesTypeTable.getTriangleTypesTable()
-                , TriangleTypes.RECTANGULAR);
-        double minSquareRectangularTypeTriangle = TrianglesTypeTable.findMinSquare(TrianglesTypeTable.getTriangleTypesTable()
-                , TriangleTypes.RECTANGULAR);
-
-        double maxPerimeterArbitraryTypeTriangle = TrianglesTypeTable.findMaxPerimeter(TrianglesTypeTable.getTriangleTypesTable()
-                , TriangleTypes.ARBITRARY);
-        double minPerimeterArbitraryTypeTriangle = TrianglesTypeTable.findMinPerimeter(TrianglesTypeTable.getTriangleTypesTable()
-                , TriangleTypes.ARBITRARY);
-
-        double maxSquareArbitraryTypeTriangle = TrianglesTypeTable.findMaxSquare(TrianglesTypeTable.getTriangleTypesTable()
-                , TriangleTypes.ARBITRARY);
-        double minSquareArbitraryTypeTriangle = TrianglesTypeTable.findMinSquare(TrianglesTypeTable.getTriangleTypesTable()
-                , TriangleTypes.ARBITRARY);
+        System.out.println("Arbitrary triangle with max perimeter -> " + triangleMaxPerimeterArbitraryTypeTriangle.getPerimeter()
+                + "; triangle -> " + triangleMaxPerimeterArbitraryTypeTriangle);
 
     }
 }
