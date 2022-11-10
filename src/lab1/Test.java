@@ -32,9 +32,9 @@ public class Test {
             System.out.println(e);
         }
 
-        TrianglesTypeTable.addTriangleTypeToTable(firstTriangle);
-        TrianglesTypeTable.addTriangleTypeToTable(secondTriangle);
-        TrianglesTypeTable.addTriangleTypeToTable(thirdTriangle);
+        TrianglesTypeTable.addTriangleByTypeToTable(firstTriangle);
+        TrianglesTypeTable.addTriangleByTypeToTable(secondTriangle);
+        TrianglesTypeTable.addTriangleByTypeToTable(thirdTriangle);
 
         System.out.println(TrianglesTypeTable.getTriangleTypesTable());
 

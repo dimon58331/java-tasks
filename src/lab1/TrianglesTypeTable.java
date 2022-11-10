@@ -6,7 +6,7 @@ import java.util.*;
 public class TrianglesTypeTable {
     private static Map<TriangleTypes, ArrayList<Object>> triangleTypesArrayListMap = new HashMap<>();
 
-    public static void addTriangleTypeToTable(Triangle triangle){
+    public static void addTriangleByTypeToTable(Triangle triangle){
 
         List<Double> lengthOfSides = triangle.getLengths();
 
