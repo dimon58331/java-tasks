@@ -15,7 +15,8 @@ public class Test {
 
 
         List<Point> firstPointList = new ArrayList<>();
-        Collections.addAll(firstPointList, new Point(0, 3), new Point(4, 0), new Point(0, 0));
+        Collections.addAll(firstPointList, new Point(0, 0), new Point(5, 5 * Math.sqrt(3))
+                , new Point(10, 0));
 
         List<Point> secondPointList = new ArrayList<>();
         Collections.addAll(secondPointList ,new Point(0, 2), new Point(2, 0), new Point(0, 0));
@@ -31,6 +32,8 @@ public class Test {
         }catch (Exception e){
             System.out.println(e);
         }
+
+        System.out.println(firstTriangle.getLengths());
 
         TrianglesTypeTable.addTriangleByTypeToTable(firstTriangle);
         TrianglesTypeTable.addTriangleByTypeToTable(secondTriangle);

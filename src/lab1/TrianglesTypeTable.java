@@ -22,10 +22,13 @@ public class TrianglesTypeTable {
 
         boolean isRectangular = (thirdASIN == 90 || secondASIN == 90 || firstASIN == 90);
 
-        if ((triangle.getLengths().get(0) == triangle.getLengths().get(1)) && (triangle.getLengths().get(0) == triangle.getLengths().get(2))){
+
+        if ((Objects.equals(triangle.getLengths().get(0), triangle.getLengths().get(1)))
+                && (Objects.equals(triangle.getLengths().get(0), triangle.getLengths().get(2)))){
            addTriangleToTable(TriangleTypes.EQUILATERAL, triangle);
-        } else if ((triangle.getLengths().get(0) != triangle.getLengths().get(1)) && (triangle.getLengths().get(0) != triangle.getLengths().get(2))
-                    && (triangle.getLengths().get(1) != triangle.getLengths().get(2)) && !isRectangular)  {
+        } else if ((!Objects.equals(triangle.getLengths().get(0), triangle.getLengths().get(1)))
+                && (!Objects.equals(triangle.getLengths().get(0), triangle.getLengths().get(2)))
+                && (!Objects.equals(triangle.getLengths().get(1), triangle.getLengths().get(2))) && !isRectangular)  {
             addTriangleToTable(TriangleTypes.ARBITRARY, triangle);
         } else if (isRectangular) {
             addTriangleToTable(TriangleTypes.RECTANGULAR, triangle);

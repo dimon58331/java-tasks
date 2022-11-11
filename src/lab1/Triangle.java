@@ -79,7 +79,7 @@ public class Triangle implements Figure{
         return lengthList;
     }
 
-    private double calculateLength(double firstX, double secondX, double firstY, double secondY){
+    private double calculateLength(double firstX, double firstY, double secondX, double secondY){
         return Math.sqrt(Math.pow(firstX - secondX, 2) + Math.pow(firstY - secondY, 2));
     }
 
