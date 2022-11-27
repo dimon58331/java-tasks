@@ -1,22 +1,22 @@
 package TriangleTypeTable;
 
-import Triangle.Triangle;
+import Figure.Figure;
 import TriangleType.TriangleType;
 
 import java.util.*;
 
 
 public class TriangleTypeTable {
-    private static Map<TriangleType, ArrayList<Object>> triangleTypesArrayListMap = new HashMap<>();
+    private static Map<TriangleType, ArrayList<Figure>> triangleTypesArrayListMap = new HashMap<>();
 
-    public static void addTriangleByTypeToTable(Triangle triangle){
+    public static void addTriangleByTypeToTable(Figure figure){
 
-        List<Double> lengthOfSides = triangle.calculateLengths();
+        List<Double> lengthOfSides = figure.calculateLengths();
 
         double maxLength = Collections.max(lengthOfSides);
         lengthOfSides.remove(maxLength);
 
-        double firstSin = (2 * triangle.calculateSquare()) / (lengthOfSides.get(0) * lengthOfSides.get(1));
+        double firstSin = (2 * figure.calculateSquare()) / (lengthOfSides.get(0) * lengthOfSides.get(1));
         double secondSin = firstSin * lengthOfSides.get(0) / maxLength;
 
         double firstASIN = (Math.asin(firstSin) * 180) / Math.PI;
@@ -26,37 +26,35 @@ public class TriangleTypeTable {
         boolean isRectangular = (thirdASIN == 90 || secondASIN == 90 || firstASIN == 90);
 
 
-        if ((Objects.equals(triangle.calculateLengths().get(0), triangle.calculateLengths().get(1)))
-                && (Objects.equals(triangle.calculateLengths().get(0), triangle.calculateLengths().get(2)))){
-           addTriangleToTable(TriangleType.EQUILATERAL, triangle);
-        } else if ((!Objects.equals(triangle.calculateLengths().get(0), triangle.calculateLengths().get(1)))
-                && (!Objects.equals(triangle.calculateLengths().get(0), triangle.calculateLengths().get(2)))
-                && (!Objects.equals(triangle.calculateLengths().get(1), triangle.calculateLengths().get(2))) && !isRectangular)  {
-            addTriangleToTable(TriangleType.ARBITRARY, triangle);
+        if ((Objects.equals(figure.calculateLengths().get(0), figure.calculateLengths().get(1)))
+                && (Objects.equals(figure.calculateLengths().get(0), figure.calculateLengths().get(2)))){
+           addTriangleToTable(TriangleType.EQUILATERAL, figure);
+        } else if ((!Objects.equals(figure.calculateLengths().get(0), figure.calculateLengths().get(1)))
+                && (!Objects.equals(figure.calculateLengths().get(0), figure.calculateLengths().get(2)))
+                && (!Objects.equals(figure.calculateLengths().get(1), figure.calculateLengths().get(2))) && !isRectangular)  {
+            addTriangleToTable(TriangleType.ARBITRARY, figure);
         } else if (isRectangular) {
-            addTriangleToTable(TriangleType.RECTANGULAR, triangle);
+            addTriangleToTable(TriangleType.RECTANGULAR, figure);
         }else{
-            addTriangleToTable(TriangleType.ISOSCELES, triangle);
+            addTriangleToTable(TriangleType.ISOSCELES, figure);
         }
     }
 
-    private static void addTriangleToTable(TriangleType triangleType, Triangle triangle){
+    private static void addTriangleToTable(TriangleType triangleType, Figure figure){
 
         triangleTypesArrayListMap.computeIfAbsent(triangleType, k -> new ArrayList<>());
 
-        triangleTypesArrayListMap.get(triangleType).add(triangle);
+        triangleTypesArrayListMap.get(triangleType).add(figure);
     }
 
-    public static Map<TriangleType, ArrayList<Object>> getTriangleTypesTable() {
+    public static Map<TriangleType, ArrayList<Figure>> getTriangleTypesTable() {
         return triangleTypesArrayListMap;
     }
 
-    public static Triangle findTriangleWithMaxPerimeter(TriangleType triangleType){
-        Triangle triangleWithMaxPerimeter = null;
+    public static Figure findTriangleWithMaxPerimeter(TriangleType triangleType){
+        Figure triangleWithMaxPerimeter = null;
         double maxPerimeter = 0;
-        for (Object obj : triangleTypesArrayListMap.get(triangleType)) {
-            Triangle triangle = (Triangle) obj;
-
+        for (Figure triangle : triangleTypesArrayListMap.get(triangleType)) {
             if ((triangle.calculatePerimeter() > maxPerimeter)) {
                 maxPerimeter = triangle.calculatePerimeter();
                 triangleWithMaxPerimeter = triangle;
@@ -66,12 +64,10 @@ public class TriangleTypeTable {
         return triangleWithMaxPerimeter;
     }
 
-    public static Triangle findTriangleWithMaxSquare(TriangleType triangleType){
-        Triangle triangleWithMaxSquare = null;
+    public static Figure findTriangleWithMaxSquare(TriangleType triangleType){
+        Figure triangleWithMaxSquare = null;
         double maxSquare = 0;
-        for (Object obj : triangleTypesArrayListMap.get(triangleType)) {
-            Triangle triangle = (Triangle) obj;
-
+        for (Figure triangle : triangleTypesArrayListMap.get(triangleType)) {
             if ((triangle.calculateSquare() > maxSquare)) {
                 maxSquare = triangle.calculateSquare();
                 triangleWithMaxSquare = triangle;
@@ -81,12 +77,10 @@ public class TriangleTypeTable {
         return triangleWithMaxSquare;
     }
 
-    public static Triangle findTriangleWithMinPerimeter(TriangleType triangleType){
-        Triangle triangleWithMinPerimeter = null;
+    public static Figure findTriangleWithMinPerimeter(TriangleType triangleType){
+        Figure triangleWithMinPerimeter = null;
         double minPerimeter = 0;
-        for (Object obj : triangleTypesArrayListMap.get(triangleType)) {
-            Triangle triangle = (Triangle) obj;
-
+        for (Figure triangle : triangleTypesArrayListMap.get(triangleType)) {
             if ((triangle.calculatePerimeter() < minPerimeter) || minPerimeter == 0) {
                 minPerimeter = triangle.calculatePerimeter();
                 triangleWithMinPerimeter = triangle;
@@ -96,12 +90,10 @@ public class TriangleTypeTable {
         return triangleWithMinPerimeter;
     }
 
-    public static Triangle findTriangleWithMinSquare(TriangleType triangleType){
-        Triangle triangleWithMinSquare = null;
+    public static Figure findTriangleWithMinSquare(TriangleType triangleType){
+        Figure triangleWithMinSquare = null;
         double minSquare = 0;
-        for (Object obj : triangleTypesArrayListMap.get(triangleType)) {
-            Triangle triangle = (Triangle) obj;
-
+        for (Figure triangle : triangleTypesArrayListMap.get(triangleType)) {
             if ((triangle.calculateSquare() < minSquare) || minSquare == 0) {
                 minSquare = triangle.calculateSquare();
                 triangleWithMinSquare = triangle;
