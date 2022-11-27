@@ -1,12 +1,16 @@
-package lab1;
+package Lab1.Triangle;
+
+import Lab1.Figure.Figure;
+import Lab1.Point.Point;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Triangle implements Figure{
+public class Triangle implements Figure {
     private List<Point> points;
 
     public Triangle() {
+        points = new ArrayList<>();
     }
 
     public Triangle(List<Point> points) throws Exception {
@@ -34,7 +38,7 @@ public class Triangle implements Figure{
     }
 
     @Override
-    public double getPerimeter() {
+    public double calculatePerimeter() {
 
         double perimeter = 0;
 
@@ -50,9 +54,9 @@ public class Triangle implements Figure{
     }
 
     @Override
-    public double getSquare() {
+    public double calculateSquare() {
 
-        double semiPerimeter = getPerimeter() / 2;
+        double semiPerimeter = calculatePerimeter() / 2;
 
         double expression = semiPerimeter;
 
@@ -66,7 +70,8 @@ public class Triangle implements Figure{
         return (double)Math.round(Math.sqrt(expression) * 100d) / 100d;
     }
 
-    public List<Double> getLengths(){
+    @Override
+    public List<Double> calculateLengths(){
         List<Double> lengthList = new ArrayList<>();
 
         for (int i = 0; i < points.size() - 1; i++){

@@ -1,6 +1,6 @@
-package lab1;
+package Lab1.TriangleType;
 
-public enum TriangleTypes {
+public enum TriangleType {
     EQUILATERAL,
     ARBITRARY,
     RECTANGULAR,
