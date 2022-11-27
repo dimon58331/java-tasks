@@ -1,7 +1,7 @@
-package Lab1.TrianglesTypeTable;
+package TrianglesTypeTable;
 
-import Lab1.Triangle.Triangle;
-import Lab1.TriangleType.TriangleType;
+import Triangle.Triangle;
+import TriangleType.TriangleType;
 
 import java.util.*;
 

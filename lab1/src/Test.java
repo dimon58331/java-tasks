@@ -1,9 +1,7 @@
-package Lab1;
-
-import Lab1.Point.Point;
-import Lab1.Triangle.Triangle;
-import Lab1.TriangleType.TriangleType;
-import Lab1.TrianglesTypeTable.TrianglesTypeTable;
+import Point.Point;
+import Triangle.Triangle;
+import TriangleType.TriangleType;
+import TrianglesTypeTable.TrianglesTypeTable;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package Lab1.TriangleType;
+package TriangleType;
 
 public enum TriangleType {
     EQUILATERAL,

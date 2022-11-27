@@ -1,7 +1,7 @@
-package Lab1.Triangle;
+package Triangle;
 
-import Lab1.Figure.Figure;
-import Lab1.Point.Point;
+import Figure.Figure;
+import Point.Point;
 
 import java.util.ArrayList;
 import java.util.List;

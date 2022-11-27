@@ -1,4 +1,4 @@
-package Lab1.Figure;
+package Figure;
 
 import java.util.List;
 
