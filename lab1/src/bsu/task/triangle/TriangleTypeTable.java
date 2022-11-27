@@ -1,7 +1,7 @@
-package bsu.task.triangletypetable;
+package bsu.task.triangle;
 
 import bsu.task.figure.Figure;
-import bsu.task.triangletype.TriangleType;
+import bsu.task.triangle.TriangleType;
 
 import java.util.*;
 
