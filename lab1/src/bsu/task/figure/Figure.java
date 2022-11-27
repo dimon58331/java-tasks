@@ -1,4 +1,4 @@
-package Figure;
+package bsu.task.figure;
 
 import java.util.List;
 

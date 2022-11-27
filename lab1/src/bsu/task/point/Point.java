@@ -1,4 +1,4 @@
-package Point;
+package bsu.task.point;
 
 public class Point {
 

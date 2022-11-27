@@ -1,7 +1,7 @@
-package Triangle;
+package bsu.task.triangle;
 
-import Figure.Figure;
-import Point.Point;
+import bsu.task.figure.Figure;
+import bsu.task.point.Point;
 
 import java.util.ArrayList;
 import java.util.List;

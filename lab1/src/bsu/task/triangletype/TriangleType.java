@@ -1,4 +1,4 @@
-package TriangleType;
+package bsu.task.triangletype;
 
 public enum TriangleType {
     EQUILATERAL,

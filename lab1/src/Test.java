@@ -1,8 +1,8 @@
-import Figure.Figure;
-import Point.Point;
-import Triangle.Triangle;
-import TriangleType.TriangleType;
-import TriangleTypeTable.TriangleTypeTable;
+import bsu.task.figure.Figure;
+import bsu.task.point.Point;
+import bsu.task.triangle.Triangle;
+import bsu.task.triangletype.TriangleType;
+import bsu.task.triangletypetable.TriangleTypeTable;
 
 import java.util.ArrayList;
 import java.util.Collections;
