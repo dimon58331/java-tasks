@@ -1,4 +1,4 @@
-package TrianglesTypeTable;
+package TriangleTypeTable;
 
 import Triangle.Triangle;
 import TriangleType.TriangleType;
@@ -6,7 +6,7 @@ import TriangleType.TriangleType;
 import java.util.*;
 
 
-public class TrianglesTypeTable {
+public class TriangleTypeTable {
     private static Map<TriangleType, ArrayList<Object>> triangleTypesArrayListMap = new HashMap<>();
 
     public static void addTriangleByTypeToTable(Triangle triangle){
