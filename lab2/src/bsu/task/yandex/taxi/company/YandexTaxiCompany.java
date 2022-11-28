@@ -15,6 +15,10 @@ public class YandexTaxiCompany extends FactoryTaxiCompany {
 
         ratePark = new HashMap<>();
 
+        ArrayList<Car> mercedesBenzW222 = new ArrayList<>();
+        Collections.addAll(mercedesBenzW222, new MercedesBenzW222());
+        ratePark.put(Rate.BUSINESS, mercedesBenzW222);
+
         ArrayList<Car> renoLogan = new ArrayList<>();
         Collections.addAll(renoLogan, new RenoLogan());
         ratePark.put(Rate.ECONOMY, renoLogan);
@@ -22,10 +26,6 @@ public class YandexTaxiCompany extends FactoryTaxiCompany {
         ArrayList<Car> volkswagenPolo = new ArrayList<>();
         Collections.addAll(volkswagenPolo, new VolkswagenPolo());
         ratePark.put(Rate.STANDARD, volkswagenPolo);
-
-        ArrayList<Car> mercedesBenzW222 = new ArrayList<>();
-        Collections.addAll(mercedesBenzW222, new MercedesBenzW222());
-        ratePark.put(Rate.BUSINESS, mercedesBenzW222);
     }
 
     @Override
