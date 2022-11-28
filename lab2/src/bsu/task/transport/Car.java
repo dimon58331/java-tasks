@@ -1,6 +1,6 @@
 package bsu.task.transport;
 
-public abstract class Car {
+public abstract class Car implements Comparable<Car>{
     protected double averageFuelConsumption;
     protected double price;
     protected double maxSpeed;
@@ -27,6 +27,18 @@ public abstract class Car {
 
     public double getPrice() {
         return price;
+    }
+
+    @Override
+    public int compareTo(Car o) {
+        double result = (this.getAverageFuelConsumption() - o.getAverageFuelConsumption());
+        if (result < 1 && result > 0){
+            return 1;
+        } else if (result < 0) {
+            return -1;
+        }
+
+        return (int)result;
     }
 
     @Override

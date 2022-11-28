@@ -28,6 +28,20 @@ public class YandexTaxiCompany extends FactoryTaxiCompany {
         ratePark.put(Rate.BUSINESS, mercedesBenzW222);
     }
 
+
+    @Override
+    public List<Car> sortCarsByAverageFuelConsumptionLowerToUpper() {
+        List<Car> carsSortedByAverageFuelConsumptionLowerToUpper = new ArrayList<>();
+
+        for (Map.Entry<Rate, ArrayList<Car>> entry : ratePark.entrySet()) {
+            carsSortedByAverageFuelConsumptionLowerToUpper.addAll(entry.getValue());
+        }
+
+        Collections.sort(carsSortedByAverageFuelConsumptionLowerToUpper);
+
+        return carsSortedByAverageFuelConsumptionLowerToUpper;
+    }
+
     @Override
     protected Car giveCar(Rate rate) {
         return ratePark.get(rate).get(0);

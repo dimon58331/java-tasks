@@ -4,6 +4,7 @@ import bsu.task.rate.Rate;
 import bsu.task.transport.Car;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public abstract class FactoryTaxiCompany {
@@ -11,6 +12,8 @@ public abstract class FactoryTaxiCompany {
     public Car orderTaxi(Rate rate){
         return giveCar(rate);
     }
+
+    public abstract List<Car> sortCarsByAverageFuelConsumptionLowerToUpper();
 
     protected abstract Car giveCar(Rate rate);
 
