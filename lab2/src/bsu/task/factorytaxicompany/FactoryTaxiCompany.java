@@ -4,6 +4,7 @@ import bsu.task.rate.Rate;
 import bsu.task.transport.Car;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +14,17 @@ public abstract class FactoryTaxiCompany {
         return giveCar(rate);
     }
 
-    public abstract List<Car> getSortCarsByAverageFuelConsumptionLowerToUpper();
+    public List<Car> getSortCarsByAverageFuelConsumptionLowerToUpper(){
+        List<Car> carsSortedByAverageFuelConsumptionLowerToUpper = new ArrayList<>();
+
+        for (Map.Entry<Rate, ArrayList<Car>> entry : ratePark.entrySet()) {
+            carsSortedByAverageFuelConsumptionLowerToUpper.addAll(entry.getValue());
+        }
+
+        Collections.sort(carsSortedByAverageFuelConsumptionLowerToUpper);
+
+        return carsSortedByAverageFuelConsumptionLowerToUpper;
+    }
 
     protected abstract Car giveCar(Rate rate);
 
