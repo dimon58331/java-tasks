@@ -11,6 +11,6 @@ public class Test {
         System.out.println("Information about rate park: " + yandexTaxi.getRatePark());
         System.out.println("Information about total price of auto park: " + yandexTaxi.calculateAutoParkPrise());
 
-        System.out.println("Sorted cars by average fuel consumption from lower to upper: " + yandexTaxi.sortCarsByAverageFuelConsumptionLowerToUpper());
+        System.out.println("Sorted cars by average fuel consumption from lower to upper: " + yandexTaxi.getSortCarsByAverageFuelConsumptionLowerToUpper());
     }
 }

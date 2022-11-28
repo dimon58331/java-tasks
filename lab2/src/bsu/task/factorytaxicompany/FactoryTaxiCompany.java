@@ -13,7 +13,7 @@ public abstract class FactoryTaxiCompany {
         return giveCar(rate);
     }
 
-    public abstract List<Car> sortCarsByAverageFuelConsumptionLowerToUpper();
+    public abstract List<Car> getSortCarsByAverageFuelConsumptionLowerToUpper();
 
     protected abstract Car giveCar(Rate rate);
 

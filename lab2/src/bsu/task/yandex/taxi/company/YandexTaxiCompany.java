@@ -30,7 +30,7 @@ public class YandexTaxiCompany extends FactoryTaxiCompany {
 
 
     @Override
-    public List<Car> sortCarsByAverageFuelConsumptionLowerToUpper() {
+    public List<Car> getSortCarsByAverageFuelConsumptionLowerToUpper() {
         List<Car> carsSortedByAverageFuelConsumptionLowerToUpper = new ArrayList<>();
 
         for (Map.Entry<Rate, ArrayList<Car>> entry : ratePark.entrySet()) {
