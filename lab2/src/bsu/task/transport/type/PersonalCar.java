@@ -7,6 +7,7 @@ public class PersonalCar extends Car {
 
     public PersonalCar(){
     }
+    
     public PersonalCar(double averageFuelConsumption, double price, double maxSpeed, String model, boolean childSeat) {
         super(averageFuelConsumption, price, maxSpeed, model);
         this.childSeat = childSeat;
