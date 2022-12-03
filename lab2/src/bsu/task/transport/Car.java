@@ -4,13 +4,32 @@ public abstract class Car implements Comparable<Car>{
     protected double averageFuelConsumption;
     protected double price;
     protected double maxSpeed;
+    protected String model;
+
+    protected Car(){
+    }
+
+    protected Car(double averageFuelConsumption, double price, double maxSpeed, String model) {
+        this.averageFuelConsumption = averageFuelConsumption;
+        this.price = price;
+        this.maxSpeed = maxSpeed;
+        this.model = model;
+    }
+
+    public double getAverageFuelConsumption() {
+        return averageFuelConsumption;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 
     public double getMaxSpeed() {
         return maxSpeed;
     }
 
-    public void setMaxSpeed(double maxSpeed) {
-        this.maxSpeed = maxSpeed;
+    public String getModel() {
+        return model;
     }
 
     public void setAverageFuelConsumption(double averageFuelConsumption) {
@@ -21,12 +40,12 @@ public abstract class Car implements Comparable<Car>{
         this.price = price;
     }
 
-    public double getAverageFuelConsumption() {
-        return averageFuelConsumption;
+    public void setMaxSpeed(double maxSpeed) {
+        this.maxSpeed = maxSpeed;
     }
 
-    public double getPrice() {
-        return price;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     @Override
@@ -39,15 +58,5 @@ public abstract class Car implements Comparable<Car>{
         }
 
         return (int)result;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "car=" + this.getClass().getSimpleName() +
-                ", averageFuelConsumption=" + averageFuelConsumption +
-                ", price=" + price +
-                ", maxSpeed=" + maxSpeed +
-                '}' + '\n';
     }
 }
