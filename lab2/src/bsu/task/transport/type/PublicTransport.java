@@ -5,6 +5,9 @@ import bsu.task.transport.Car;
 public class PublicTransport extends Car {
     private int amountPassengerPlace;
 
+    public PublicTransport() {
+    }
+
     public PublicTransport(double averageFuelConsumption, double price, double maxSpeed, String model
             , int amountPassengerPlace) {
         super(averageFuelConsumption, price, maxSpeed, model);

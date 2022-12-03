@@ -5,6 +5,8 @@ import bsu.task.transport.Car;
 public class PersonalCar extends Car {
     private boolean childSeat;
 
+    public PersonalCar(){
+    }
     public PersonalCar(double averageFuelConsumption, double price, double maxSpeed, String model, boolean childSeat) {
         super(averageFuelConsumption, price, maxSpeed, model);
         this.childSeat = childSeat;
