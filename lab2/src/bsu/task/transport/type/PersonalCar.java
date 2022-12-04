@@ -25,10 +25,10 @@ public class PersonalCar extends Car {
     public String toString() {
         return "PersonalCar{" +
                 "childSeat=" + childSeat +
-                ", averageFuelConsumption=" + averageFuelConsumption +
-                ", price=" + price +
-                ", maxSpeed=" + maxSpeed +
-                ", model='" + model + '\'' +
+                ", averageFuelConsumption=" + getAverageFuelConsumption() +
+                ", price=" + getPrice() +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", model='" + getModel() + '\'' +
                 '}';
     }
 }

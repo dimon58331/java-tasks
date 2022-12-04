@@ -25,9 +25,10 @@ public class Truck extends Car {
     public String toString() {
         return "Truck{" +
                 "maxLoadCapacity=" + maxLoadCapacity +
-                ", averageFuelConsumption=" + averageFuelConsumption +
-                ", price=" + price +
-                ", maxSpeed=" + maxSpeed +
+                ", averageFuelConsumption=" + getAverageFuelConsumption() +
+                ", price=" + getPrice() +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", model='" + getModel() + '\'' +
                 '}';
     }
 }

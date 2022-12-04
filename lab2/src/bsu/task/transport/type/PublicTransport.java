@@ -26,9 +26,10 @@ public class PublicTransport extends Car {
     public String toString() {
         return "PublicTransport{" +
                 "amountPassengerPlace=" + amountPassengerPlace +
-                ", averageFuelConsumption=" + averageFuelConsumption +
-                ", price=" + price +
-                ", maxSpeed=" + maxSpeed +
+                ", averageFuelConsumption=" + getAverageFuelConsumption() +
+                ", price=" + getPrice() +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", model='" + getModel() + '\'' +
                 '}';
     }
 }

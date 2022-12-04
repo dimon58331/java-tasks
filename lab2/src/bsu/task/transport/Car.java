@@ -1,10 +1,10 @@
 package bsu.task.transport;
 
 public abstract class Car implements Comparable<Car>{
-    protected double averageFuelConsumption;
-    protected double price;
-    protected double maxSpeed;
-    protected String model;
+    private double averageFuelConsumption;
+    private double price;
+    private double maxSpeed;
+    private String model;
 
     protected Car(){
     }
