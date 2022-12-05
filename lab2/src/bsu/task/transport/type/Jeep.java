@@ -2,13 +2,13 @@ package bsu.task.transport.type;
 
 import bsu.task.transport.Car;
 
-public class Truck extends Car {
+public class Jeep extends Car {
     private double maxLoadCapacity;
 
-    public Truck() {
+    public Jeep() {
     }
 
-    public Truck(double averageFuelConsumption, double price, double maxSpeed, String model, double maxLoadCapacity) {
+    public Jeep(double averageFuelConsumption, double price, double maxSpeed, String model, double maxLoadCapacity) {
         super(averageFuelConsumption, price, maxSpeed, model);
         this.maxLoadCapacity = maxLoadCapacity;
     }
@@ -23,7 +23,7 @@ public class Truck extends Car {
 
     @Override
     public String toString() {
-        return "Truck{" +
+        return "Jeep{" +
                 "maxLoadCapacity=" + maxLoadCapacity +
                 ", averageFuelConsumption=" + getAverageFuelConsumption() +
                 ", price=" + getPrice() +

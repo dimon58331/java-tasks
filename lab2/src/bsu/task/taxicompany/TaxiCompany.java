@@ -2,7 +2,7 @@ package bsu.task.taxicompany;
 
 import bsu.task.rate.Rate;
 import bsu.task.transport.Car;
-import bsu.task.transport.type.PersonalCar;
+import bsu.task.transport.type.Sedan;
 
 import java.util.*;
 
@@ -14,17 +14,17 @@ public class TaxiCompany {
         ratePark = new HashMap<>();
 
         ArrayList<Car> businessCars = new ArrayList<>();
-        Collections.addAll(businessCars, new PersonalCar(17, 70000, 360, "MERCEDES-BENZ W222"
+        Collections.addAll(businessCars, new Sedan(17, 70000, 360, "MERCEDES-BENZ W222"
                 , true));
         ratePark.put(Rate.BUSINESS, businessCars);
 
         ArrayList<Car> economyCars = new ArrayList<>();
-        Collections.addAll(economyCars, new PersonalCar(7, 10000, 180
+        Collections.addAll(economyCars, new Sedan(7, 10000, 180
                 , "RENO LOGAN", false));
         ratePark.put(Rate.ECONOMY, economyCars);
 
         ArrayList<Car> standardCars = new ArrayList<>();
-        Collections.addAll(standardCars, new PersonalCar(11, 18000, 240
+        Collections.addAll(standardCars, new Sedan(11, 18000, 240
                 , "VOLKSWAGEN POLO", true));
         ratePark.put(Rate.STANDARD, standardCars);
     }
